@@ -43,6 +43,11 @@ async function handleLoginRequest(request) {
   const ip = request.headers.get("CF-Connecting-IP");
   const formData = await request.formData();
   const password = formData.get("password");
+
+  // 校验输入，防止 SQL 注入和特殊字符
+  if (!isValidPassword(password)) {
+    return new Response("无效输入", { status: 400 });
+  }
   
   // 检查 IP 封锁状态
   if (isBlocked(ip)) {
@@ -100,6 +105,11 @@ function redirectToLogin() {
     status: 401,
     headers: { "Content-Type": "text/html" }
   });
+}
+
+function isValidPassword(password) {
+  const pattern = /^[a-zA-Z0-9!@#\$%\^\&*\)\(+=._-]+$/g;
+  return typeof password === "string" && password.length > 0 && password.length <= 64 && pattern.test(password);
 }
 
 // 解析请求中的 Cookie
