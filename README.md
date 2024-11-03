@@ -9,5 +9,5 @@ The scipt is only used for academic purpose. Please do not use it illegally.
 - [Cloudflare Workers settings](https://developers.cloudflare.com/workers/platform/settings)
 - [Google Scholar](https://scholar.google.com)
 - [Wikipedia](https://www.wikipedia.com)
-## Liscence
-Under MIT Liscence.
+## License
+Under MIT License.
