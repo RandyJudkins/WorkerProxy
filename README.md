@@ -3,7 +3,8 @@ This is a cloudflare worker proxy with a password authentication page. Users nee
 ## Password
 You need to replace the password in the code.
 ## Warnings
-The scipt is only used for academic purpose. Please do not use it illegally.
+- This script may contain lots of bugs.
+- The scipt is only used for academic purpose. Please do not use it illegally.
 ## Recommendations
 - [Cloudflare Workers docs](https://developers.cloudflare.com/workers)
 - [Cloudflare Workers settings](https://developers.cloudflare.com/workers/platform/settings)
